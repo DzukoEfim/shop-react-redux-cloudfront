@@ -1,5 +1,22 @@
 # React-shop-cloudfront
 
+# Task 2:
+
+### manually created CloudFront - https://d16bj3mntrgxo1.cloudfront.net/ (app logo changed from default to Yafim's 
+### automatically created CloudFromt - https://d3amm0bd4nb7r3.cloudfront.net/
+
+firstly, download this repo and run 
+### `npm install`
+
+then you are free to make any changes in frontend code
+
+App, see top left corner of the page)
+
+## to run deploy locally, run command 
+### `npm run deploy`
+## It will build front-end app, put it into /aws-infra/resource folder, and automatically starts aws deploy
+
+
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
 
 - [Vite](https://vitejs.dev/) as a project bundler

@@ -19,7 +19,7 @@ export default defineConfig({
     setupFiles: "./src/setupTests.ts",
   },
   build: {
-    outDir: './aws-infra/resources/build',
+    outDir: './aws/resources/build',
     emptyOutDir: true
   }
 });

@@ -33,7 +33,7 @@ export default function Header() {
             underline="none"
             to="/"
           >
-            Yafim's Store!
+            Yafim's Store From Automated Deploy!
           </Link>
         </Typography>
 

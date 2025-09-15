@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <AppBar position="relative">
-      <Toolbar>
+      <Toolbar color="red">
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           <Link
             component={RouterLink}
@@ -33,7 +33,7 @@ export default function Header() {
             underline="none"
             to="/"
           >
-            My Store!
+            Yafim's Store!
           </Link>
         </Typography>
 

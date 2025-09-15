@@ -1,8 +1,9 @@
 # React-shop-cloudfront
 
-## manually created CloudFront - d16bj3mntrgxo1.cloudfront.net/ (app logo changed from default to Yafim's 
-## automatically created CloudFromt - https://d3amm0bd4nb7r3.cloudfront.net/
 # Task 2:
+
+### manually created CloudFront - https://d16bj3mntrgxo1.cloudfront.net/ (app logo changed from default to Yafim's 
+### automatically created CloudFromt - https://d3amm0bd4nb7r3.cloudfront.net/
 
 firstly, download this repo and run 
 ### `npm install`

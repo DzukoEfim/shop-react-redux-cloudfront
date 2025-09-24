@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import { formatAsPrice } from "~/utils/utils";
 import AddProductToCart from "~/components/AddProductToCart/AddProductToCart";
 import { useAvailableProducts } from "~/queries/products";
+import { Link } from "react-router-dom";
 
 export default function Products() {
   const { data = [], isLoading } = useAvailableProducts();
@@ -19,25 +20,27 @@ export default function Products() {
     <Grid container spacing={4}>
       {/* eslint-disable-next-line @typescript-eslint/no-unused-vars */}
       {data.map(({ count, ...product }, index) => (
-        <Grid item key={product.id} xs={12} sm={6} md={4}>
-          <Card
-            sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-          >
-            <CardMedia
-              sx={{ pt: "56.25%" }}
-              image={`https://source.unsplash.com/random?sig=${index}`}
-              title="Image title"
-            />
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography gutterBottom variant="h5" component="h2">
-                {product.title}
-              </Typography>
-              <Typography>{formatAsPrice(product.price)}</Typography>
-            </CardContent>
-            <CardActions>
-              <AddProductToCart product={product} />
-            </CardActions>
-          </Card>
+        <Grid item xs={12} sm={6} md={4} key={product.id}>
+          <Link to={`/products/${product.id}`}>
+            <Card
+              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <CardMedia
+                sx={{ pt: "56.25%" }}
+                image={`https://picsum.photos/id/${index}/200/200`}
+                title="Image title"
+              />
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {product.title}
+                </Typography>
+                <Typography>{formatAsPrice(product.price)}</Typography>
+              </CardContent>
+              <CardActions>
+                <AddProductToCart product={product} />
+              </CardActions>
+            </Card>
+          </Link>
         </Grid>
       ))}
     </Grid>

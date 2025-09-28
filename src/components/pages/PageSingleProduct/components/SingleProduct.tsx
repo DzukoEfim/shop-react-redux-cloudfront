@@ -38,6 +38,7 @@ export default function SingleProduct() {
             <Typography gutterBottom variant="h6" component="h3">
               {data?.description}
             </Typography>
+            <Typography>Count: {data.count}</Typography>
             <Typography>{formatAsPrice(data?.price ?? 0)}</Typography>
           </CardContent>
           {!!data && (

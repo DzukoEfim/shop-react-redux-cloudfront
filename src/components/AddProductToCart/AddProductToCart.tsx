@@ -5,20 +5,17 @@ import Add from "@mui/icons-material/Add";
 import Remove from "@mui/icons-material/Remove";
 import IconButton from "@mui/material/IconButton";
 import { useCart, useInvalidateCart, useUpsertCart } from "~/queries/cart";
+import { CartItem } from "~/models/CartItem";
 
-type AddProductToCartProps = {
-  product: Product;
-};
-
-export default function AddProductToCart({ product }: AddProductToCartProps) {
-  const { data = [], isFetching } = useCart();
+export default function AddProductToCart({ product_id }: CartItem) {
+  const { data, isFetching } = useCart();
   const { mutate: upsertCart } = useUpsertCart();
   const invalidateCart = useInvalidateCart();
-  const cartItem = data.find((i) => i.product.id === product.id);
+  const cartItem = data?.find((i) => i.product_id === product_id);
 
   const addProduct = () => {
     upsertCart(
-      { product, count: cartItem ? cartItem.count + 1 : 1 },
+      { product_id, count: cartItem ? cartItem.count + 1 : 1 },
       { onSuccess: invalidateCart }
     );
   };

@@ -62,7 +62,7 @@ export default function PageOrder() {
         if (!product) {
           throw new Error("Product not found");
         }
-        return { product, count: item.count };
+        return { product_id: item.productId, count: item.count };
       });
     }
     return [];

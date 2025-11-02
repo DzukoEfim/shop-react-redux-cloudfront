@@ -38,7 +38,7 @@ export default function Products() {
                 <Typography>{formatAsPrice(product.price)}</Typography>
               </CardContent>
               <CardActions>
-                <AddProductToCart product={product} />
+                <AddProductToCart product_id={product.id!} count={0} />
               </CardActions>
             </Card>
           </Link>

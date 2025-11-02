@@ -43,7 +43,7 @@ export default function SingleProduct() {
           </CardContent>
           {!!data && (
             <CardActions>
-              <AddProductToCart product={data} />
+              <AddProductToCart product_id={data.id!} count={0} />
             </CardActions>
           )}
         </Card>
